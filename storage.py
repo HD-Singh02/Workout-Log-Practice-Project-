@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-FILE = Path(__file__).parent / "worouts.json"
+FILE = Path(__file__).parent / "workouts.json"
 
 def save_workouts(workouts):
     with open(FILE, "w", encoding="utf-8") as f:
