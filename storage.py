@@ -7,9 +7,11 @@ def save_workouts(workouts):
     with open(FILE, "w", encoding="utf-8") as f:
         json.dump(workouts, f, indent=4)
 
-#save_workouts([{"exercise": "Bench", "Sets": 3}])
+#save_workouts([{"exercise": "Bench", "sets": 3}])
 
 def load_workouts():
+    if not FILE.exists():
+        return[]
     with open(FILE, "r", encoding="utf-8") as f:
         loaded = json.load(f)
         return loaded
