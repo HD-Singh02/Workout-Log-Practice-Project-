@@ -12,3 +12,7 @@ def add_workout(exercise, sets, reps, weight):
     save_workouts(workouts)
     return entry
 
+# returs oldest first, same order as the file
+def get_history():
+    history = load_workouts()
+    return history
